@@ -1,6 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import Register from './pages/register';
+import {PrivateRoute} from './components/RouteUtil';
+
 
 
 function App() {
@@ -11,11 +14,17 @@ function App() {
 
         <Routes>
           <Route path="/" element={
-            <Home />
+            <PrivateRoute>
+              <Home />
+            </PrivateRoute>
           } />
 
           <Route path="/login" element={
-            <Login />
+              <Login />
+          } />
+
+          <Route path="/register" element={
+            <Register />
           } />
         </Routes>
 

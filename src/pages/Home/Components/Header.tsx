@@ -3,9 +3,10 @@ import {SidebarMenu} from "./SidebarMenu"
 interface Props {
     onClick:() => void;
     isSideBarOpen:boolean;
+    onLogout:() => void;
 }
 
-export const Header = ({onClick,isSideBarOpen}:Props) => {
+export const Header = ({onClick,isSideBarOpen,onLogout}:Props) => {
     return (
         <div className="h-12 w-100 flex items-center justify-between gap-3 shadow">
             <h4 className="ml-5">
@@ -22,6 +23,7 @@ export const Header = ({onClick,isSideBarOpen}:Props) => {
             <SidebarMenu 
                 onClose={onClick}
                 isOpen={isSideBarOpen}
+                onLogout={onLogout}
             />
             
         </div>
