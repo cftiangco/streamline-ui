@@ -1,6 +1,6 @@
 # Crimson Tiangco Assessment Part 4
 This is the client side or Front-end
-## This app will use the PORT 4101
+## This app will use the PORT 3000
 ## How to run the application
 
 ### `#1 clone this repository`
